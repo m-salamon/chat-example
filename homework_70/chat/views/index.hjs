@@ -11,6 +11,7 @@
 <div id="chatPage">
     <hr/>
     <div id="messages"></div>
+    <div id="chatters"></div>
     <form id="messageForm">
       <input id="message"/>
       <button>send</button>

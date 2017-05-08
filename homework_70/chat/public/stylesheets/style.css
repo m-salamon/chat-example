@@ -1,6 +1,10 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #666666;
+  color: white;
+  font-weight: 50;
 }
 
 a {
@@ -9,14 +13,53 @@ a {
 
 #messages {
   height: 200px;
-  border: 4px solid black;
+  width: 70%;
+  border: 4px solid #fff;
+ margin-bottom: 6px;
+  padding: 15px;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #fff;
+  color: black;
+}
+#chatters{
+  height: 200px;
+  width: 20%;
+  border: 4px solid #fff;
   margin-bottom: 6px;
+  padding: 15px;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #fff;
+  color: black;
 }
 
 #message {
-  width: 95%;
+  width: 100%;
 }
 
 #chatPage {
   display: none;
+}
+button{
+  background-color: #428bca;
+  border-radius: 6px;
+  padding: 10px 20px;
+  margin: 10px;
+  color: white;
+  font-size: 15px;
+  border: 0px solid #000;
+}
+input{
+  border-radius: 6px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+  border: 0px solid #000;
+  background-color: #fff;
+}
+.displayName{
+  font-weight: 500;
+  color: #b2b2b2;
+  padding-left: 10px;
 }

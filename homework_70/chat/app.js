@@ -44,14 +44,13 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-let chatters = [];
-
 var server = http.createServer(app);
 server.listen(8080);
 
 const socket_io = require('socket.io');
 const io = socket_io.listen(server);
 
+let chatters = [];
 // Wait for connection
 io.on('connection', socket => {
   console.log('Got a connection');

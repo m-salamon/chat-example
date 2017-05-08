@@ -5,6 +5,7 @@
 
     // listen for 'message' events from server
     const messagesDiv = $('#messages');
+    const chattersDiv = $('#chatters');
     socket.on('message', msg => {
         console.log(msg);
         messagesDiv.append('');
@@ -13,17 +14,18 @@
 
     socket.on('connectMessage', data => {
         console.log(data);
-        messagesDiv.append('<span>' + data.thanks + ' ' + data.chatters.join(' ') + '</span><br/>');
+        messagesDiv.append('<span>' + data.thanks + ' ' + '</span><br/>');
+        chattersDiv.append('<span>' + data.chatters.join('\n') + '</span><br/>');
     });
 
     socket.on('newChatter', data => {
         console.log(data);
-        messagesDiv.append('<span>' + 'Your friend ~ ' + data + ' ~ has joined the chat </span><br/>');
+        messagesDiv.append('<span class="displayName">' + data + ' has joined the chat </span><br/>');
     });
 
     socket.on('disconnectMessage', data => {
         console.log(data);
-        messagesDiv.append('<span>' + 'Your friend ~ ' + data + ' ~ has left the chat </span><br/>');
+        messagesDiv.append('<span class="displayName">' + data + ' has left the chat </span><br/>');
     });
 
     // send a 'message' event to server
